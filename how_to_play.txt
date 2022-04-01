@@ -1,0 +1,24 @@
+This text file provides a brief summary of everything you need to know about Cluedo:
+
+ - The game consists of a board which shows the rooms, corridors and secret-passages between rooms.
+ - The game consists of 6 suspect cards, 6 weapon cards, and 9 room cards.
+ - At the beginning, 3 cards (1 suspect, 1 weapon, and 1 room) are placed in the Secret Envelope - these are the winning cards.
+
+ Your main goal is to make deductions and correctly guess the 3 cards in the Secret Envelope!
+
+  - On each turn, players can move to adjacent rooms to their current room, or stay in the same room if they want (on their first turn, players can only stay in their current room).
+  - A guess consists of choosing 1 suspect, 1 weapon and 1 room (the one you are currently in).
+  - The first person that has a card that can disprove your claim must show it to you (clockwise direction).
+  - At the end of each of his turn, a player can make an accusation, in which he tries to guess the 3 cards in the Secret Envelope.
+  - If the accusation is correct, the game is over, and the person wins!
+  - If the accusation is incorrect, the person loses and can no longer make turns (but should still show cards to disprove othere players' guesses.)
+
+There are 3 levels of AI players:
+
+1. Random AI player - the most basic one. Its guess consists of 3 random cards, no matter whether he has seen them already or not. When moving around rooms, it randomly chooses a room in a list of the current room's neighbours (including the room itself).
+
+2. Medium AI (Player) - a player with a simple strategy. The AI writes down which cards he has already seen, and its objective is to ask about cards he has no information about. When moving through rooms, it has a "one-step-lookahead", meaning that he can also check each neighbour of each neighbour of the current room and go to a room he has no information about.
+
+3. Advanced AI - the most complex player. It uses a few different strategies that allow him to reason about knowlegde and learn quicker information about cards. As the greatest "shortest distance between two rooms" in Cluedo is 3 rooms, he has a lookup function that allows him to locate the room that he wants to go, and go there in the shortest way possible.
+
+Hope you enjoy the game :)
